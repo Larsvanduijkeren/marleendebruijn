@@ -29,12 +29,12 @@
             'dev_requirement' => false,
         ),
         'apimatic/jsonmapper' => array(
-            'pretty_version' => '3.1.6',
-            'version' => '3.1.6.0',
+            'pretty_version' => '3.1.7',
+            'version' => '3.1.7.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../apimatic/jsonmapper',
             'aliases' => array(),
-            'reference' => 'c6cc21bd56bfe5d5822bbd08f514be465c0b24e7',
+            'reference' => '61e45f6021e4a4e07497be596b4787c3c6b39bea',
             'dev_requirement' => false,
         ),
         'apimatic/unirest-php' => array(
@@ -65,12 +65,12 @@
             'dev_requirement' => false,
         ),
         'ezyang/htmlpurifier' => array(
-            'pretty_version' => 'v4.18.0',
-            'version' => '4.18.0.0',
+            'pretty_version' => 'v4.19.0',
+            'version' => '4.19.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../ezyang/htmlpurifier',
             'aliases' => array(),
-            'reference' => 'cb56001e54359df7ae76dc522d08845dc741621b',
+            'reference' => 'b287d2a16aceffbf6e0295559b39662612b77fcf',
             'dev_requirement' => false,
         ),
         'mk-j/php_xlsxwriter' => array(
@@ -108,7 +108,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => '9e1435fff6e9befc5a298d00e34a0bce56becb7d',
+            'reference' => '19966d2f97bbc444bb176432754e33256a7d45bf',
             'dev_requirement' => true,
         ),
         'square/square' => array(
