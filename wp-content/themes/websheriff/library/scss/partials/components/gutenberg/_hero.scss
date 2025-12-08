@@ -47,3 +47,24 @@ section.hero {
         }
     }
 }
+
+@media only screen and (max-width: 991px) {
+    section.hero {
+        .content {
+            width: 100%;
+            margin: 0;
+            padding: 0 !important;
+        }
+
+        .image {
+            width: 100%;
+            position: relative;
+
+            &:before {
+                content: '';
+                padding-top: 85%;
+                display: block;
+            }
+        }
+    }
+}

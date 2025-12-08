@@ -1,0 +1,104 @@
+section.steps {
+    .intro {
+        font-size: 1.25rem;
+    }
+
+    &.simple {
+        .steps-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: -20px;
+
+            > * {
+                width: calc(33.333% - 40px);
+                max-width: calc(33.333% - 40px);
+                flex-basis: calc(33.333% - 40px);
+                margin: 20px;
+                text-align: center;
+                font-size: 1.5rem;
+
+                .count {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                    width: 150px;
+                    height: 150px;
+                    border: 1px solid $text;
+                    font-size: 2rem;
+                    margin: 0 auto 100px auto;
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        height: 40px;
+                        width: 1px;
+                        background: $text;
+                        margin: 40px auto;
+                        left: 50%;
+                        top: calc(100% - 10px);
+                        position: absolute;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &.card,
+    &.dark-card,
+    &.slider {
+        .steps-wrapper {
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: 70px -10px -10px -10px;
+
+            > * {
+                width: calc(33.333% - 20px);
+                max-width: calc(33.333% - 20px);
+                flex-basis: calc(33.333% - 20px);
+                margin: 10px;
+                text-align: center;
+                font-size: 1.1rem;
+                background: $white;
+                padding: 0 40px 40px 40px;
+                border-radius: $radius-mid;
+
+
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+
+                .count {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                    width: 80px;
+                    height: 80px;
+                    border: 1px solid $text;
+                    font-size: 1.5rem;
+                    margin: -40px auto 40px auto;
+                    position: relative;
+                }
+
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &.dark-card .steps-wrapper > * {
+        background: $purple;
+    }
+}

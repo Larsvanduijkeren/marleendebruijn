@@ -32,11 +32,11 @@ $header_text = get_field('header_text', 'option');
     <div class='content'>
         <div class='nav'>
             <div class='flex-wrapper'>
-                <?php wp_nav_menu(['theme_location' => 'mobile-nav']); ?>
+                <?php wp_nav_menu(['theme_location' => 'header-top-nav']); ?>
 
-                <?php if (empty($header_button) === false) {
-                    echo sprintf('<a class="btn cta-btn" href="%s" target="%s">%s</a>', $header_button['url'], $header_button['target'], $header_button['title']);
-                } ?>
+                <div class="extra">
+                    <?php wp_nav_menu(['theme_location' => 'header-nav']); ?>
+                </div>
             </div>
         </div>
     </div>

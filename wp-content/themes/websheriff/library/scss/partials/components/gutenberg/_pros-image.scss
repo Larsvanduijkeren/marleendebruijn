@@ -61,3 +61,28 @@ section.pros-image {
         }
     }
 }
+
+@media only screen and (max-width: 991px) {
+    section.pros-image {
+        .image {
+            margin-top: -100px;
+        }
+
+        .card {
+            padding: 20px;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            .pro {
+                font-size: 1.1rem;
+                padding-left: 30px;
+
+                &:before {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}

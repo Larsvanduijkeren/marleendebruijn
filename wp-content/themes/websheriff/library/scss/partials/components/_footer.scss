@@ -8,11 +8,11 @@ footer.footer {
         margin-bottom: 80px;
     }
 
-
     img {
         display: block;
         max-width: 250px !important;
     }
+
     .flex-wrapper {
         display: flex;
         align-items: flex-start;
@@ -28,6 +28,36 @@ footer.footer {
 
             > *:last-child {
                 margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    footer.footer {
+        font-size: 1rem;
+
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 150px !important;
+        }
+
+        .flex-wrapper {
+            display: block;
+            margin: 0;
+
+            > * {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+                margin: 0 0 20px 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }

@@ -52,3 +52,15 @@ section.column-quote-subscription {
         text-align: center;
     }
 }
+
+@media only screen and (max-width: 991px) {
+    section.column-quote-subscription {
+        .reviews {
+            padding: 20px;
+        }
+
+        .form-content {
+            margin-top: 40px;
+        }
+    }
+}

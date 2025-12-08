@@ -1,4 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../library/fonts/HelveticaNeue-Roman.eot'),
+    url('../library/fonts/HelveticaNeue-Roman.woff') format('woff'),
+    url('../library/fonts/HelveticaNeue-Roman.woff2') format('woff2'),
+    url('../library/fonts/HelveticaNeue-Roman.ttf') format('truetype'),
+    url('../library/fonts/HelveticaNeue-Roman.svg') format('svg');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../library/fonts/HelveticaNeue-Medium.eot'),
+    url('../library/fonts/HelveticaNeue-Medium.woff') format('woff'),
+    url('../library/fonts/HelveticaNeue-Medium.woff2') format('woff2'),
+    url('../library/fonts/HelveticaNeue-Medium.ttf') format('truetype'),
+    url('../library/fonts/HelveticaNeue-Medium.svg') format('svg');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../library/fonts/HelveticaNeue-Light.eot'),
+    url('../library/fonts/HelveticaNeue-Light.woff') format('woff'),
+    url('../library/fonts/HelveticaNeue-Light.woff2') format('woff2'),
+    url('../library/fonts/HelveticaNeue-Light.ttf') format('truetype'),
+    url('../library/fonts/HelveticaNeue-Light.svg') format('svg');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../library/fonts/HelveticaNeue-Thin.eot'),
+    url('../library/fonts/HelveticaNeue-Thin.woff') format('woff'),
+    url('../library/fonts/HelveticaNeue-Thin.woff2') format('woff2'),
+    url('../library/fonts/HelveticaNeue-Thin.ttf') format('truetype'),
+    url('../library/fonts/HelveticaNeue-Thin.svg') format('svg');
+    font-style: normal;
+    font-weight: 200;
+}
+
 
 @font-face {
     font-family: 'Iconfont';
@@ -55,8 +97,9 @@ h5,
 }
 
 h1, .h1 {
-    font-size: 70px;
+    font-size: 64px;
     line-height: 1.2;
+    font-weight: 200;
 }
 
 h2, .h2 {

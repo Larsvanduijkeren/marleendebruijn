@@ -8,13 +8,20 @@ $id = get_field('id');
 ?>
 
 <section
-    class="step <?php echo $style; ?>"
+    class="steps <?php echo $style;
+    if ($style === 'card') {
+        echo ' grey';
+    }
+    if ($style === 'slider') {
+        echo ' blue';
+    }
+    ?>"
     id="<?php if (empty($id) === false) {
         echo $id;
     } ?>"
 >
     <div class="container">
-        <?php if (empty($title) === false) : ?>
+        <?php if (empty($title) === false || empty($text) === false ) : ?>
             <div class="intro center" data-aos="fade-up">
                 <h2><?php echo $title; ?></h2>
 

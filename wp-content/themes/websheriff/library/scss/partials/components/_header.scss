@@ -6,6 +6,7 @@ header.header {
     height: 140px;
     background: $white;
     z-index: 150;
+    transition: background 0.3s ease-in-out;
 
     &:before {
         content: '';
@@ -93,6 +94,7 @@ header.header {
     .bottom-bar {
         position: relative;
         z-index: 5;
+        transition: opacity 0.3s ease-in-out;
 
         .flex-wrapper {
             display: flex;
@@ -143,6 +145,38 @@ header.header {
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    header.header {
+        height: 110px;
+
+        &:before {
+            height: 50px;
+        }
+
+        .top-bar .flex-wrapper {
+            height: 60px;
+
+            .logo img {
+                height: 30px;
+            }
+
+            > div {
+                display: none;
+            }
+        }
+
+        .bottom-bar {
+            .flex-wrapper {
+                height: 50px;
+
+                > div {
+                    display: none;
                 }
             }
         }
