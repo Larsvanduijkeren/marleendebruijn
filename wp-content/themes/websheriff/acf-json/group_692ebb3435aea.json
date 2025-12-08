@@ -64,8 +64,8 @@
                 "id": ""
             },
             "choices": {
-                "white": "White",
-                "blue": "Blue"
+                "grey": "Grey",
+                "dark-blue": "Dark Blue"
             },
             "default_value": "white",
             "return_format": "value",
@@ -183,5 +183,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1765178806
+    "modified": 1765191915
 }

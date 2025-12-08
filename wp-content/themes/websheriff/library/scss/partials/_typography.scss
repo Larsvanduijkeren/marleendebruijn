@@ -43,10 +43,10 @@ h5,
     line-height: 1;
     position: relative;
     z-index: 10;
-    font-weight: 400;
+    font-weight: 300;
 
     .green {
-        color: $green;
+        color: $orange;
     }
 
     .blue {
@@ -55,32 +55,28 @@ h5,
 }
 
 h1, .h1 {
-    font-size: 46px;
+    font-size: 70px;
     line-height: 1.2;
-    font-weight: 700;
 }
 
 h2, .h2 {
-    font-size: 50px;
+    font-size: 44px;
     line-height: 1.2;
 }
 
 h3, .h3 {
     font-size: 30px;
     line-height: 1.2;
-    font-weight: 500;
 }
 
 h4, .h4 {
     font-size: 26px;
     line-height: 1.2;
-    font-weight: 500;
 }
 
 h5, .h5 {
     font-size: 18px;
     line-height: 1.2;
-    font-weight: 500;
 }
 
 @media only screen and (max-width: 991px) {

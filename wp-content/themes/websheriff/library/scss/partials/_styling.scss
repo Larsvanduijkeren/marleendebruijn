@@ -1,59 +1,49 @@
-section {
-    ul li {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        list-style: none;
-        padding: 0;
-        margin: 0 0 10px 0;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &:before {
-            @extend .icon-font;
-            content: '\e915';
-            margin-right: 10px;
-            font-size: 1.2rem;
-            margin-top: 3px;
-            color: $green;
-        }
-    }
+section:not(.pros-image):not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) + section:not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) .container {
+    padding-top: 0 !important;
 }
 
-section:not(.grey):not(.blue) {
-    overflow: hidden;
-
-    + section:not(.grey):not(.blue) .container {
-        padding-top: 0 !important;
-    }
-}
-
-
-section.grey {
-    overflow: hidden;
-    background: $light-grey;
-
-    + section.grey .container {
-        padding-top: 0 !important;
-    }
-}
-
-section.blue {
-    overflow: hidden;
-    background: $blue;
+section.dark-blue {
+    background: $dark-blue;
     color: $white;
 
     a {
         color: $white;
     }
 
-    p {
-        color: #B6BDC4;
+    + section.dark-blue .container {
+        padding-top: 0 !important;
     }
+}
+
+section.mid-blue {
+    background: $blue;
+
+    + section.mid-blue .container {
+        padding-top: 0 !important;
+    }
+}
+
+section.blue {
+    background: $light-blue;
 
     + section.blue .container {
+        padding-top: 0 !important;
+    }
+}
+
+section.grey {
+    background: $grey;
+
+    + section.grey .container {
+        padding-top: 0 !important;
+    }
+}
+
+
+section.purple {
+    background: $purple;
+
+    + section.purple .container {
         padding-top: 0 !important;
     }
 }

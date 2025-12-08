@@ -13,12 +13,12 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
-        <div class="card">
+        <div class="card" data-aos="fade-up">
             <?php if (empty($title) === false) : ?>
                 <h2><?php echo $title; ?></h2>
             <?php endif; ?>
 
-            <div class="flex-wrapper">
+            <div class="wrap">
                 <?php if (empty($bullets) === false) : ?>
                     <div class="bullets">
                         <?php foreach ($bullets as $bullet) : ?>

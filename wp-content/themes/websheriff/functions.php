@@ -3,9 +3,6 @@ include 'includes/acf-content-blocks.php';
 include 'includes/post-types.php';
 include 'includes/taxonomies.php';
 
-// Disable admin bar
-show_admin_bar(false);
-
 // ACF options page
 add_action('init', function () {
     if (function_exists('acf_add_options_page')) {
@@ -110,8 +107,7 @@ add_action('admin_menu', 'custom_change_media_menu_position', 999);
 function registerMenu()
 {
     register_nav_menu('header-top-nav', __('Header Top Nav'));
-    register_nav_menu('main-nav', __('Main Nav'));
-    register_nav_menu('footer-nav', __('Footer Nav'));
+    register_nav_menu('header-nav', __('Header Nav'));
 }
 
 add_action('init', 'registerMenu');

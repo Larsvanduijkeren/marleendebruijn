@@ -21,8 +21,9 @@ $id = get_field('id');
             <img src="<?php echo $image['sizes']['full']; ?>" alt="<?php echo $image['alt']; ?>">
         </span>
     <?php endif; ?>
-    <div class="container">
-        <div class="content">
+
+    <div class="content">
+        <div class="animation" data-aos="fade-up">
             <?php if (empty($title) === false) : ?>
                 <h2><?php echo $title; ?></h2>
             <?php endif; ?>

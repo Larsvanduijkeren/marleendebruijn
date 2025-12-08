@@ -13,7 +13,7 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
-        <div class="card">
+        <div class="card" data-aos="fade-up">
             <?php if (empty($title) === false) : ?>
                 <h2><?php echo $title; ?></h2>
             <?php endif; ?>
@@ -28,11 +28,11 @@ $id = get_field('id');
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
-
-        <?php if (empty($image) === false) : ?>
-            <span class="image">
-                <img src="<?php echo $image['sizes']['full']; ?>" alt="<?php echo $image['alt']; ?>">
-            </span>
-        <?php endif; ?>
     </div>
+
+    <?php if (empty($image) === false) : ?>
+        <span class="image" data-aos="fade-up">
+            <img src="<?php echo $image['sizes']['full']; ?>" alt="<?php echo $image['alt']; ?>">
+        </span>
+    <?php endif; ?>
 </section>

@@ -17,11 +17,11 @@ $id = get_field('id');
 >
     <div class="container">
         <?php if (empty($title) === false) : ?>
-            <h2><?php echo $title; ?></h2>
+            <h2  data-aos="fade-up"><?php echo $title; ?></h2>
         <?php endif; ?>
 
         <div class="flex-wrapper">
-            <div class="content">
+            <div class="content" data-aos="fade-up">
                 <?php if (empty($text) === false) {
                     echo $text;
                 } ?>
@@ -32,7 +32,7 @@ $id = get_field('id');
             </div>
 
             <?php if (empty($image) === false) : ?>
-                <span class="image">
+                <span class="image" data-aos="fade-up">
                     <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
                 </span>
             <?php endif; ?>

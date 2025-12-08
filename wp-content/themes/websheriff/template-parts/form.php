@@ -9,14 +9,14 @@ $id = get_field('id');
 ?>
 
 <section
-    class="form"
+    class="form blue"
     id="<?php if (empty($id) === false) {
         echo $id;
     } ?>"
 >
-    <div class="container">
+    <div class="container narrow">
         <div class="flex-wrapper">
-            <div class="content">
+            <div class="content" data-aos="fade-up">
                 <?php if (empty($title) === false) : ?>
                     <h2><?php echo $title; ?></h2>
                 <?php endif; ?>
@@ -27,13 +27,13 @@ $id = get_field('id');
             </div>
 
             <?php if (empty($image) === false) : ?>
-                <span class="image">
+                <span class="image" data-aos="fade-up">
                     <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
                 </span>
             <?php endif; ?>
         </div>
 
-        <div class="form-wrap">
+        <div class="form-wrap" data-aos="fade-up">
             <?php if (!is_admin() && empty($form_shortcode) === false) {
                 echo do_shortcode($form_shortcode);
             } ?>

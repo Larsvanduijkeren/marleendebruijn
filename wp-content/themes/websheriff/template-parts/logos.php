@@ -12,10 +12,10 @@ $id = get_field('id');
 >
     <div class="container">
         <?php if (empty($logos) === false) : ?>
-            <div class="grid">
+            <div class="flex-wrapper" data-aos="fade-up">
                 <?php foreach ($logos as $logo) : ?>
                     <?php if (empty($logo) === false) : ?>
-                        <span class="logo">
+                        <span class="image">
                             <img src="<?php echo $logo['sizes']['medium']; ?>" alt="<?php echo $logo['alt']; ?>">
                         </span>
                     <?php endif; ?>

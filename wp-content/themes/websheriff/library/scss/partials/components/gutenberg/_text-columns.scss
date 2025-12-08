@@ -1,0 +1,25 @@
+section.text-columns {
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .flex-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: -40px;
+
+        > * {
+            width: calc(50% - 80px);
+            max-width: calc(50% - 80px);
+            flex-basis: calc(50% - 80px);
+            margin: 40px;
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

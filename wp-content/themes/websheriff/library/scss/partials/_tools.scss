@@ -1,6 +1,6 @@
 .container {
-    max-width: 1400px;
-    padding: 120px 40px;
+    max-width: 1300px;
+    padding: 100px 40px;
     margin: 0 auto;
     position: relative;
     width: 100%;
@@ -12,6 +12,29 @@
 
 .grecaptcha-badge {
     visibility: hidden;
+}
+
+.separator {
+    display: block;
+    height: 60px;
+    width: 1px;
+    background: $text;
+    margin: 40px auto;
+}
+
+blockquote {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid $blue;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
 }
 
 
@@ -93,7 +116,7 @@
 }
 
 .page-content {
-    padding-top: 130px;
+    padding-top: 140px;
 }
 
 .social a {
@@ -111,7 +134,7 @@
 
     &:hover,
     &:focus {
-        background: $green;
+        background: $orange;
     }
 
     &:before {

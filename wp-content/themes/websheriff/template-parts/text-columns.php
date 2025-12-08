@@ -11,10 +11,11 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
+        <div class="content">
         <div class="flex-wrapper">
             <?php if (empty($columns) === false) : ?>
                 <?php foreach ($columns as $column) : ?>
-                    <div class="column">
+                    <div class="column" data-aos="fade-up">
                         <?php if (empty($column['title']) === false) : ?>
                             <h2><?php echo $column['title']; ?></h2>
                         <?php endif; ?>
@@ -29,6 +30,7 @@ $id = get_field('id');
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
+        </div>
         </div>
     </div>
 </section>

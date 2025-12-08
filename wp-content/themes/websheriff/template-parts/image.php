@@ -11,8 +11,6 @@ $id = get_field('id');
     } ?>"
 >
     <?php if (empty($image) === false) : ?>
-        <span class="image">
             <img src="<?php echo $image['sizes']['full']; ?>" alt="<?php echo $image['alt']; ?>">
-        </span>
     <?php endif; ?>
 </section>

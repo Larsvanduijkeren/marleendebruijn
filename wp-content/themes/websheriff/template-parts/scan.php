@@ -11,18 +11,18 @@ $id = get_field('id');
 ?>
 
 <section
-    class="scan"
+    class="scan blue"
     id="<?php if (empty($id) === false) {
         echo $id;
     } ?>"
 >
     <div class="container">
         <?php if (empty($label) === false) : ?>
-            <h2 class="h4"><?php echo $label; ?></h2>
+            <h2 data-aos="fade-up" class="h4"><?php echo $label; ?></h2>
         <?php endif; ?>
 
         <div class="flex-wrapper">
-            <div class="content">
+            <div class="content" data-aos="fade-up">
                 <?php if (empty($title) === false) : ?>
                     <h3 class="h2"><?php echo $title; ?></h3>
                 <?php endif; ?>
@@ -33,13 +33,13 @@ $id = get_field('id');
             </div>
 
             <?php if (empty($image) === false) : ?>
-                <span class="image">
+                <span class="image" data-aos="fade-up">
                     <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
                 </span>
             <?php endif; ?>
         </div>
 
-        <div class="form-wrap">
+        <div class="form-wrap" data-aos="fade-up">
             <?php if (!is_admin() && empty($form_shortcode) === false) {
                 echo do_shortcode($form_shortcode);
             } ?>
@@ -55,7 +55,7 @@ $id = get_field('id');
             $review_author = get_field('author', $review);
             $review_meta = get_field('meta', $review);
             ?>
-            <div class="single-review">
+            <div class="single-review" data-aos="fade-up">
                 <?php if (empty($review_image) === false) : ?>
                     <span class="image">
                         <img src="<?php echo $review_image['sizes']['medium']; ?>"
@@ -63,7 +63,6 @@ $id = get_field('id');
                     </span>
                 <?php endif; ?>
 
-                <h4><?php echo get_the_title($review); ?></h4>
 
                 <?php if (empty($review_text) === false) : ?>
                     <p><?php echo $review_text; ?></p>

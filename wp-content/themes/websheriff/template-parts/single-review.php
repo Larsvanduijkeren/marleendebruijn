@@ -7,22 +7,28 @@ $id = get_field('id');
 ?>
 
 <section
-    class="single-review <?php echo $size; ?>"
+    class="single-review <?php echo $size;
+    if ($size === 'small') {
+        echo ' grey';
+    } ?>"
     id="<?php if (empty($id) === false) {
         echo $id;
     } ?>"
 >
-    <?php if ($size !== 'small' && empty($image) === false) : ?>
-        <span class="image">
-            <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
-        </span>
-    <?php endif; ?>
-
+    <?php if ($size === 'small') : ?>
     <div class="container">
+        <?php endif; ?>
+
+        <?php if ($size !== 'small' && empty($image) === false) : ?>
+            <span class="image">
+                <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
+            </span>
+        <?php endif; ?>
+
         <div class="content">
             <?php if ($size === 'small' && empty($image) === false) : ?>
-                <span class="image">
-                    <img src="<?php echo $image['sizes']['']; ?>" alt="<?php echo $image['alt']; ?>">
+                <span class="image"  data-aos="fade-up">
+                    <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
                 </span>
             <?php endif; ?>
 
@@ -32,7 +38,7 @@ $id = get_field('id');
                 $review_author = get_field('author', $review);
                 $review_meta = get_field('meta', $review);
                 ?>
-                <div class="single-review">
+                <div class="single-review"  data-aos="fade-up">
                     <?php if (empty($review_image) === false) : ?>
                         <span class="image">
                             <img src="<?php echo $review_image['sizes']['medium']; ?>"
@@ -40,7 +46,7 @@ $id = get_field('id');
                         </span>
                     <?php endif; ?>
 
-                    <h4><?php echo get_the_title($review); ?></h4>
+                    <h2><?php echo get_the_title($review); ?></h2>
 
                     <?php if (empty($review_text) === false) : ?>
                         <p><?php echo $review_text; ?></p>
@@ -58,5 +64,7 @@ $id = get_field('id');
                 </div>
             <?php endif; ?>
         </div>
+        <?php if ($size === 'small') : ?>
     </div>
+<?php endif; ?>
 </section>

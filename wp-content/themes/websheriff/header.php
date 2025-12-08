@@ -20,10 +20,7 @@
 wp_body_open();
 
 $logo = get_field('logo', 'option');
-$phone = get_field('phone', 'option');
-$email = get_field('email', 'option');
-$app_link = get_field('app_link', 'option');
-$buttons = get_field('buttons', 'option');
+$header_text = get_field('header_text', 'option');
 ?>
 
 <span class="hamburger">
@@ -47,58 +44,26 @@ $buttons = get_field('buttons', 'option');
 
 <header class='header'>
     <div class='container'>
-        <div class='flex-wrapper'>
-            <a href='/' class='logo'>
-                Logo Groots Verzekerd
-                <?php
-                if (empty($logo) === false) : ?>
-                    <img src='<?php echo $logo['sizes']['large']; ?>' alt=''>
-                <?php endif; ?>
-            </a>
-            <div class="header-wrapper">
-                <div class="top-wrapper">
-                    <?php wp_nav_menu(['theme_location' => 'header-top-nav']); ?>
-
-                    <div class="right">
-                        <?php if(empty($phone) === false) : ?>
-                            <a class="phone" href="tel:<?php echo $phone; ?>">
-                                <?php echo $phone; ?>
-                            </a>
-                        <?php endif; ?>
-
-                        <?php if(empty($email) === false) : ?>
-                            <a class="email" href="mailto:<?php echo $email; ?>">
-                                Email
-                            </a>
-                        <?php endif; ?>
-
-<?php if(empty($app_link) === false) : ?>
-    <a href="<?php echo $app_link; ?>" target="_blank">
-        Log in
-    </a>
-<?php endif; ?>
-                    </div>
-                </div>
-
-                <div class="bottom-wrapper">
-                    <?php wp_nav_menu(['theme_location' => 'main-nav']); ?>
-
-                    <?php if(empty($buttons) === false) :
-                        $class = 'btn-ghost';
-                        ?>
-<div class="buttons">
-    <?php foreach ($buttons as $key => $button) :
-        if($key === 1) {
-            $class = 'btn';
-        }
-        ?>
-        <?php if(empty($button['button']) === false) {
-            echo sprintf('<a href="%s" target="%s" class="btn %s">%s</a>', $button['button']['url'], $button['button']['target'], $class, $button['button']['title']);
-        } ?>
-    <?php endforeach; ?>
-</div>
+        <div class="top-bar">
+            <div class="flex-wrapper">
+                <a href='/' class='logo'>
+                    Logo Marleen de Bruijn
+                    <?php if (empty($logo) === false) : ?>
+                        <img src='<?php echo $logo['sizes']['large']; ?>' alt='<?php echo $logo['alt']; ?>'>
                     <?php endif; ?>
-                </div>
+                </a>
+
+                <?php wp_nav_menu(['theme_location' => 'header-top-nav']); ?>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="flex-wrapper">
+                <?php if (empty($header_text) === false) : ?>
+                    <p><?php echo $header_text; ?></p>
+                <?php endif; ?>
+
+                <?php wp_nav_menu(['theme_location' => 'header-nav']); ?>
             </div>
         </div>
     </div>

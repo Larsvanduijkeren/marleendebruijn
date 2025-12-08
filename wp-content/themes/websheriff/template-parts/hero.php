@@ -16,26 +16,30 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
-        <div class="flex-wrapper">
-            <div class="content">
-                <?php if (empty($title) === false) : ?>
-                    <h1><?php echo $title; ?></h1>
-                <?php endif; ?>
-
-                <?php if (empty($text) === false) : ?>
-                    <p><?php echo $text; ?></p>
-                <?php endif; ?>
-
-                <?php if (empty($button) === false) {
-                    echo sprintf('<a href="%s" target="%s" class="btn-ghost">%s</a>', $button['url'], $button['target'], $button['title']);
-                } ?>
-            </div>
-
-            <?php if (empty($image) === false) : ?>
-                <span class="image">
-                    <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
-                </span>
+        <div class="content" data-aos="fade-up">
+            <?php if (empty($title) === false) : ?>
+                <h1><?php echo $title; ?></h1>
             <?php endif; ?>
+
+            <?php if (empty($text) === false) : ?>
+                <p><?php echo $text; ?></p>
+            <?php endif; ?>
+
+            <?php if (empty($button) === false) {
+                $class = '';
+
+                if($color === 'dark-blue') {
+                    $class = 'white';
+                }
+
+                echo sprintf('<a href="%s" target="%s" class="btn-ghost %s">%s</a>', $button['url'], $button['target'], $class, $button['title']);
+            } ?>
         </div>
     </div>
+
+    <?php if (empty($image) === false) : ?>
+        <span class="image">
+            <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>">
+        </span>
+    <?php endif; ?>
 </section>

@@ -15,7 +15,7 @@ $id = get_field('id');
 >
     <div class="container">
         <?php if (empty($title) === false) : ?>
-            <div class="intro center">
+            <div class="intro center" data-aos="fade-up">
                 <h2><?php echo $title; ?></h2>
 
                 <?php if (empty($text) === false) {
@@ -25,7 +25,7 @@ $id = get_field('id');
         <?php endif; ?>
 
         <?php if (empty($steps) === false) : ?>
-            <div class="steps-wrapper">
+            <div class="steps-wrapper" data-aos="fade-up">
                 <?php foreach ($steps as $key => $step) : ?>
                     <div class="step">
                         <span class="count">

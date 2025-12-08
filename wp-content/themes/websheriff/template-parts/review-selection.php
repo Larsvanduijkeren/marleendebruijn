@@ -26,7 +26,7 @@ if (!empty($selection)) {
 ?>
 
 <section
-    class="team-selection"
+    class="review-selection"
     id="<?php if (!empty($id)) {
         echo esc_attr($id);
     } ?>"
@@ -41,7 +41,7 @@ if (!empty($selection)) {
                     $review_author = get_field('author', $review_id);
                     $review_meta = get_field('meta', $review_id);
                     ?>
-                    <div class="single-review">
+                    <div class="single-review" data-aos="fade-up">
                         <?php if (empty($review_image) === false) : ?>
                             <span class="image">
                                 <img src="<?php echo $review_image['sizes']['medium']; ?>"

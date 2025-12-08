@@ -14,7 +14,7 @@ select {
     padding: 15px !important;
     max-width: 100%;
     background: $white;
-    border-radius: 6px;
+    border-radius: 100px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     outline: none;
     box-shadow: none;
@@ -22,6 +22,10 @@ select {
     &::placeholder {
         color: #8C8C8C;
     }
+}
+
+textarea {
+    border-radius: $radius-small;
 }
 
 label,

@@ -157,9 +157,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "options_page",
                 "operator": "==",
-                "value": "post"
+                "value": "acf-options"
             }
         ]
     ],
@@ -173,5 +173,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764669862
+    "modified": 1765190492
 }

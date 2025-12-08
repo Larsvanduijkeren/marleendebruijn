@@ -8,30 +8,41 @@ $id = get_field('id');
 ?>
 
 <section
-    class="column-quote-subscription"
+    class="column-quote-subscription purple"
     id="<?php if (empty($id) === false) {
         echo $id;
     } ?>"
 >
     <div class="container">
         <?php if (empty($quotes) === false) : ?>
-            <div class="quotes">
-                <?php foreach ($quotes as $quote) : ?>
-                    <div class="quote">
-                        <?php if (empty($quote['title']) === false) : ?>
-                            <h3><?php echo $quote['title']; ?></h3>
+            <div class="reviews" data-aos="fade-up">
+                <?php foreach ($quotes as $review) :
+                    $review_id = $review;
+                    $review_image = get_field('image', $review_id);
+                    $review_text = get_field('review_text', $review_id);
+                    $review_author = get_field('author', $review_id);
+                    $review_meta = get_field('meta', $review_id);
+                    ?>
+                    <div class="single-review">
+                        <?php if (empty($review_image) === false) : ?>
+                            <span class="image">
+                                <img src="<?php echo $review_image['sizes']['medium']; ?>"
+                                     alt="<?php echo $review_image['alt']; ?>">
+                            </span>
                         <?php endif; ?>
 
-                        <?php if (empty($quote['text']) === false) : ?>
-                            <p><?php echo $quote['text']; ?></p>
+                        <h4><?php echo get_the_title($review_id); ?></h4>
+
+                        <?php if (empty($review_text) === false) : ?>
+                            <p><?php echo $review_text; ?></p>
                         <?php endif; ?>
 
-                        <?php if (empty($quote['author']) === false) : ?>
+                        <?php if (empty($review_author) === false) : ?>
                             <div class="author">
-                                <?php echo $quote['author']; ?>
+                                <?php echo $review_author; ?>
 
-                                <?php if (empty($quote['meta']) === false) : ?>
-                                    - <?php echo $quote['meta']; ?>
+                                <?php if (empty($review_meta) === false) : ?>
+                                    - <?php echo $review_meta; ?>
                                 <?php endif; ?>
                             </div>
                         <?php endif; ?>
@@ -40,7 +51,7 @@ $id = get_field('id');
             </div>
         <?php endif; ?>
 
-        <div class="form-content">
+        <div class="form-content" data-aos="fade-up">
             <?php if (empty($title) === false) : ?>
                 <h2><?php echo $title; ?></h2>
             <?php endif; ?>
