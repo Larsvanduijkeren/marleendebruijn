@@ -1,4 +1,6 @@
 <?php
+$columns = get_field('columns');
+
 $id = get_field('id');
 ?>
 
@@ -9,6 +11,24 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
-        <h2>text-columns</h2>
+        <div class="flex-wrapper">
+            <?php if (empty($columns) === false) : ?>
+                <?php foreach ($columns as $column) : ?>
+                    <div class="column">
+                        <?php if (empty($column['title']) === false) : ?>
+                            <h2><?php echo $column['title']; ?></h2>
+                        <?php endif; ?>
+
+                        <?php if (empty($column['text']) === false) {
+                            echo $column['text'];
+                        } ?>
+
+                        <?php if (empty($column['button']) === false) {
+                            echo sprintf('<a href="%s" target="%s" class="btn">%s</a>', $column['button']['url'], $column['button']['target'], $column['button']['title']);
+                        } ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
     </div>
 </section>

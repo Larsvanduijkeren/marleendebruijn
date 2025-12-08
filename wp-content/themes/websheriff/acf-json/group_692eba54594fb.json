@@ -93,6 +93,23 @@
             "delay": 0
         },
         {
+            "key": "field_6936a64f9850d",
+            "label": "Button",
+            "name": "button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
             "key": "field_692ebaa3cb781",
             "label": "Form shortcode",
             "name": "form_shortcode",
@@ -180,5 +197,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764670200
+    "modified": 1765189204
 }

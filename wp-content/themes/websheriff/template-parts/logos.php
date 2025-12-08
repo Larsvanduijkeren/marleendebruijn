@@ -1,4 +1,6 @@
 <?php
+$logos = get_field('logos');
+
 $id = get_field('id');
 ?>
 
@@ -9,6 +11,16 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
-        <h2>logos</h2>
+        <?php if (empty($logos) === false) : ?>
+            <div class="grid">
+                <?php foreach ($logos as $logo) : ?>
+                    <?php if (empty($logo) === false) : ?>
+                        <span class="logo">
+                            <img src="<?php echo $logo['sizes']['medium']; ?>" alt="<?php echo $logo['alt']; ?>">
+                        </span>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
     </div>
 </section>

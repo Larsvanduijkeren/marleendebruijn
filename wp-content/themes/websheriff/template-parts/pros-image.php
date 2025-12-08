@@ -1,4 +1,8 @@
 <?php
+$title = get_field('title');
+$pros = get_field('pros');
+$image = get_field('image');
+
 $id = get_field('id');
 ?>
 
@@ -9,6 +13,26 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
-        <h2>pros-image</h2>
+        <div class="card">
+            <?php if (empty($title) === false) : ?>
+                <h2><?php echo $title; ?></h2>
+            <?php endif; ?>
+
+            <?php if (empty($pros) === false) : ?>
+                <?php foreach ($pros as $pro) : ?>
+                    <div class="pro">
+                        <?php if (empty($pro['text']) === false) {
+                            echo $pro['text'];
+                        } ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
+
+        <?php if (empty($image) === false) : ?>
+            <span class="image">
+                <img src="<?php echo $image['sizes']['full']; ?>" alt="<?php echo $image['alt']; ?>">
+            </span>
+        <?php endif; ?>
     </div>
 </section>

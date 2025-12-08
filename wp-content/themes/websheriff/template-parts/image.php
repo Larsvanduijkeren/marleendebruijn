@@ -1,4 +1,6 @@
 <?php
+$image = get_field('image');
+
 $id = get_field('id');
 ?>
 
@@ -8,7 +10,9 @@ $id = get_field('id');
         echo $id;
     } ?>"
 >
-    <div class="container">
-        <h2>image</h2>
-    </div>
+    <?php if (empty($image) === false) : ?>
+        <span class="image">
+            <img src="<?php echo $image['sizes']['full']; ?>" alt="<?php echo $image['alt']; ?>">
+        </span>
+    <?php endif; ?>
 </section>

@@ -1,6 +1,6 @@
 {
     "key": "group_692eb9af2dc46",
-    "title": "Block: Bullets Image Cards",
+    "title": "Block: Bullets Image Card",
     "fields": [
         {
             "key": "field_692eb9af74924",
@@ -133,5 +133,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764669923
+    "modified": 1765178396
 }
