@@ -22,6 +22,7 @@
 @import "partials/components/mobile-nav";
 @import "partials/components/blog";
 @import "partials/components/single-post";
+@import "partials/components/search";
 
 // Gutenberg
 @import "partials/components/gutenberg/bullets-image-card";
@@ -41,3 +42,4 @@
 @import "partials/components/gutenberg/text-columns";
 @import "partials/components/gutenberg/text";
 @import "partials/components/gutenberg/post-selection";
+@import "partials/components/gutenberg/post-archive";

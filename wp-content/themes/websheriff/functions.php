@@ -104,6 +104,25 @@ function custom_change_media_menu_position()
 
 add_action('admin_menu', 'custom_change_media_menu_position', 999);
 
+# Disables Gutenberg for custom post types
+add_filter( 'use_block_editor_for_post_type', 'my_disable_gutenberg', 10, 2 );
+
+function my_disable_gutenberg( $current_status, $post_type ) {
+
+    $disabled_post_types = [ 'post' ];
+
+    return ! in_array( $post_type, $disabled_post_types, true );
+}
+
+function get_reading_time($post_id = null) {
+    $post_id = $post_id ?: get_the_ID();
+    $content = get_post_field('post_content', $post_id);
+    $word_count = str_word_count(strip_tags($content));
+    $minutes = ceil($word_count / 200); // Round up
+    return $minutes;
+}
+
+
 function registerMenu()
 {
     register_nav_menu('header-top-nav', __('Header Top Nav'));

@@ -29,6 +29,37 @@ input[type=submit] {
 
 }
 
+
+.btn-text {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    color: $orange;
+    font-family: $font-titles;
+    border: none;
+    font-weight: 500;
+    box-shadow: none;
+    position: relative;
+    padding-right: 25px;
+    z-index: 5;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: #a75f28;
+    }
+
+    &:after {
+        @extend .icon-font;
+        content: '\e910';
+        margin-left: 10px;
+        font-size: .8rem;
+    }
+}
+
 .btn-ghost {
     appearance: none;
     -webkit-appearance: none;

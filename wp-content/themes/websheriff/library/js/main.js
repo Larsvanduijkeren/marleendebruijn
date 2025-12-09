@@ -7,6 +7,7 @@ jQuery.noConflict();
         accordion();
         headerController();
         stepsSlider();
+        postSlider();
 
         if ($(window).width() > 991) {
             lenis();
@@ -22,6 +23,28 @@ jQuery.noConflict();
             });
         }
     });
+
+    let postSlider = () => {
+        let slider = $(".post-archive-intro .slider");
+
+        if (slider && slider.length > 0) {
+            slider.slick({
+                autoplay: true,
+                dots: false,
+                arrows: false,
+                variableWidth: false,
+                infinite: true,
+                fade: true,
+            });
+
+            $('.post-archive-intro .slider .prev').on('click keydown', function () {
+                slider.slick("slickPrev");
+            });
+            $('.post-archive-intro .slider .next').on('click keydown', function () {
+                slider.slick("slickNext");
+            });
+        }
+    };
 
     let stepsSlider = () => {
         let slider = $(".steps.slider .steps-wrapper");

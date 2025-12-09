@@ -19,6 +19,70 @@
             "placement": "top",
             "endpoint": 0,
             "selected": 0
+        },
+        {
+            "key": "field_6937f2b2edaaa",
+            "label": "Intro card image",
+            "name": "intro_card_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6937f2a4edaa8",
+            "label": "Intro card title",
+            "name": "intro_card_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6937f2aaedaa9",
+            "label": "Intro card button",
+            "name": "intro_card_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -40,5 +104,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1765180692
+    "modified": 1765274299
 }

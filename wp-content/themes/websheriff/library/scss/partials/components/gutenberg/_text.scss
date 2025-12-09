@@ -4,6 +4,11 @@ section.text {
         border-top: 1px solid $text;
     }
 
+    .orange {
+        color: $orange;
+        font-weight: 500;
+    }
+
     &.has-image {
         margin-top: 200px;
 
