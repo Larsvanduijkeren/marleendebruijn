@@ -17,11 +17,12 @@ section.pros-image {
 
         .pro {
             position: relative;
-            padding-left: 60px;
+            padding-left: 80px;
             font-size: 1.5rem;
             text-align: left;
             margin: 0 auto 20px auto;
             max-width: 800px;
+
 
             &:last-child {
                 margin-bottom: 0;
@@ -29,11 +30,19 @@ section.pros-image {
 
             &:before {
                 @extend .icon-font;
-                content: '\e900';
+                content: '\e912';
                 position: absolute;
                 left: 0;
                 top: 5px;
-                font-size: 1.5rem;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                border-radius: 100%;
+                border: 1px solid $text;
+                color: $text;
+                font-size: 2rem;
             }
         }
     }

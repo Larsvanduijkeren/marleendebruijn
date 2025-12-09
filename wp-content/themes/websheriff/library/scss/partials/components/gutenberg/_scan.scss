@@ -20,7 +20,7 @@ section.scan {
             font-size: 1.25rem;
 
             > * {
-                max-width: 600px;
+                max-width: 500px;
             }
 
             > *:last-child {
@@ -57,13 +57,34 @@ section.scan {
     }
 
     .single-review {
-        padding: 40px;
+        padding: 80px;
         border-radius: $radius-mid;
-        background: $grey;
+        background: $white;
         font-size: 1.5rem;
         margin: 80px auto 0 auto;
         max-width: 1000px;
         text-align: center;
+        position: relative;
+
+        &:before {
+            @extend .icon-font;
+            content: '\e911';
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid $white;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, -100%);
+        }
 
         .author {
             font-size: 1rem;
@@ -77,6 +98,11 @@ section.scan {
 
 @media only screen and (max-width: 991px) {
     section.scan {
+        .single-review {
+            padding: 20px;
+            font-size: 1.25rem;
+        }
+
         .flex-wrapper {
             display: block;
             margin: 0;

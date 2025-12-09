@@ -50,19 +50,11 @@ $id = get_field('id');
         </div>
 
         <?php if (empty($review) === false) :
-            $review_image = get_field('image', $review);
             $review_text = get_field('review_text', $review);
             $review_author = get_field('author', $review);
             $review_meta = get_field('meta', $review);
             ?>
             <div class="single-review" data-aos="fade-up">
-                <?php if (empty($review_image) === false) : ?>
-                    <span class="image">
-                        <img src="<?php echo $review_image['sizes']['medium']; ?>"
-                             alt="<?php echo $review_image['alt']; ?>">
-                    </span>
-                <?php endif; ?>
-
 
                 <?php if (empty($review_text) === false) : ?>
                     <p><?php echo $review_text; ?></p>

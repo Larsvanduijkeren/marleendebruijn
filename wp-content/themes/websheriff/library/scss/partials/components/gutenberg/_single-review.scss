@@ -10,8 +10,18 @@ section.single-review {
             max-width: 800px;
             margin: 0 auto;
 
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
             .image {
                 display: block;
+                margin-bottom: 20px;
+
+                img {
+                    width: 125px;
+                }
             }
         }
     }
@@ -63,20 +73,27 @@ section.single-review {
             margin: 0 auto;
             text-align: center;
             color: $white;
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+
+            h2 {
+                font-weight: 500;
+            }
         }
     }
 }
 
 @media only screen and (max-width: 991px) {
     section.single-review {
-
         &:not(.small) {
             padding-bottom: 80px;
+
+            + section.white {
+                margin-top: -80px !important;
+            }
 
             .content {
                 position: static;

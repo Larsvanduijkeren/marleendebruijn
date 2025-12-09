@@ -26,7 +26,7 @@ if (!empty($selection)) {
 ?>
 
 <section
-    class="review-selection"
+    class="review-selection white"
     id="<?php if (!empty($id)) {
         echo esc_attr($id);
     } ?>"

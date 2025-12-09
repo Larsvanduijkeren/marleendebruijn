@@ -6,6 +6,7 @@ jQuery.noConflict();
         menu();
         accordion();
         headerController();
+        stepsSlider();
 
         if ($(window).width() > 991) {
             lenis();
@@ -21,6 +22,20 @@ jQuery.noConflict();
             });
         }
     });
+
+    let stepsSlider = () => {
+        let slider = $(".steps.slider .steps-wrapper");
+
+        if (slider && slider.length > 0) {
+            slider.slick({
+                autoplay: false,
+                dots: true,
+                arrows: false,
+                variableWidth: true,
+                infinite: false,
+            });
+        }
+    };
 
     let headerController = function () {
         let scrollWrapper = $(window);

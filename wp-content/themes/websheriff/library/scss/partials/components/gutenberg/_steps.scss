@@ -17,19 +17,21 @@ section.steps {
                 flex-basis: calc(33.333% - 40px);
                 margin: 20px;
                 text-align: center;
-                font-size: 1.5rem;
+                font-size: 1.35rem;
 
                 .count {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    border-radius: 100%;
-                    width: 150px;
-                    height: 150px;
-                    border: 1px solid $text;
+                    width: 125px;
+                    height: 125px;
                     font-size: 2rem;
                     margin: 0 auto 100px auto;
                     position: relative;
+                    background-image: url(/wp-content/themes/websheriff/library/images/polygon.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
 
                     &:after {
                         content: '';
@@ -52,9 +54,44 @@ section.steps {
         }
     }
 
-    &.card,
-    &.dark-card,
     &.slider {
+        overflow: hidden;
+
+        .slick-list,
+        .slick-track {
+            overflow: visible;
+        }
+
+        .step {
+            padding-left: 75px;
+            padding-top: 75px;
+            width: 80vw;
+            max-width: 300px;
+            margin-right: 20px;
+            position: relative;
+            z-index: 5;
+
+            .count {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 125px;
+                height: 125px;
+                background: $white;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $light-blue;
+                font-size: 3rem;
+                z-index: -1;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &.card,
+    &.dark-card {
         .steps-wrapper {
             display: flex;
             align-items: stretch;
@@ -70,9 +107,9 @@ section.steps {
                 text-align: center;
                 font-size: 1.1rem;
                 background: $white;
-                padding: 0 40px 40px 40px;
+                padding: 60px 40px 40px 40px;
                 border-radius: $radius-mid;
-
+                position: relative;
 
                 > *:last-child {
                     margin-bottom: 0;
@@ -81,14 +118,19 @@ section.steps {
                 .count {
                     display: flex;
                     align-items: center;
+                    transform: translate(-50%, -50%);
                     justify-content: center;
                     border-radius: 100%;
                     width: 80px;
                     height: 80px;
-                    border: 1px solid $text;
+                    background-image: url(/wp-content/themes/websheriff/library/images/polygon.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
                     font-size: 1.5rem;
-                    margin: -40px auto 40px auto;
-                    position: relative;
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
                 }
 
                 > *:last-child {
@@ -100,5 +142,58 @@ section.steps {
 
     &.dark-card .steps-wrapper > * {
         background: $purple;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    section.steps {
+        &.simple {
+            .steps-wrapper {
+                display: block;
+                margin: 0;
+
+                > * {
+                    width: 100%;
+                    max-width: 100%;
+                    flex-basis: 100%;
+                    margin: 0 0 40px 0;
+
+                    .count {
+                        width: 80px;
+                        height: 80px;
+                        font-size: 2rem;
+                        margin-bottom: 50px;
+
+                        &:after {
+                            height: 20px;
+                            top: calc(100% - 20px);
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &.card,
+        &.dark-card {
+            .steps-wrapper {
+                display: block;
+                margin: 80px 0 0 0 !important;
+
+                > * {
+                    width: 100%;
+                    max-width: 100%;
+                    flex-basis: 100%;
+                    margin: 0 0 80px 0;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
     }
 }

@@ -39,12 +39,6 @@ $id = get_field('id');
                 $review_meta = get_field('meta', $review);
                 ?>
                 <div class="single-review"  data-aos="fade-up">
-                    <?php if (empty($review_image) === false) : ?>
-                        <span class="image">
-                            <img src="<?php echo $review_image['sizes']['medium']; ?>"
-                                 alt="<?php echo $review_image['alt']; ?>">
-                        </span>
-                    <?php endif; ?>
 
                     <h2><?php echo get_the_title($review); ?></h2>
 

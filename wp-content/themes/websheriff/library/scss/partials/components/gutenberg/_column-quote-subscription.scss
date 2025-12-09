@@ -18,12 +18,26 @@ section.column-quote-subscription {
     }
 
     .reviews {
-        padding: 40px;
+        padding: 80px;
         border-radius: $radius-mid;
         background: $white;
         margin: 80px auto 0 auto;
         max-width: 1000px;
         text-align: center;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 100%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid $white;
+        }
 
         .author {
             font-size: 1rem;
@@ -34,9 +48,10 @@ section.column-quote-subscription {
         }
 
         .single-review {
-            margin-bottom: 40px;
             padding-bottom: 40px;
             border-bottom: 1px solid $blue;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
 
             &:last-child {
                 margin-bottom: 0;
@@ -47,7 +62,7 @@ section.column-quote-subscription {
     }
 
     .form-content {
-        max-width: 800px;
+        max-width: 700px;
         margin: 80px auto 0 auto;
         text-align: center;
     }

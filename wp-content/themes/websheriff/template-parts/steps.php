@@ -3,12 +3,16 @@ $style = get_field('style');
 $title = get_field('title');
 $text = get_field('text');
 $steps = get_field('steps');
+$add_connector_arrow = get_field('add_connector_arrow');
 
 $id = get_field('id');
 ?>
 
 <section
     class="steps <?php echo $style;
+    if ($add_connector_arrow) {
+        echo ' add-connector-arrow';
+    }
     if ($style === 'card') {
         echo ' grey';
     }
@@ -20,6 +24,10 @@ $id = get_field('id');
         echo $id;
     } ?>"
 >
+    <?php if (empty($add_connector_arrow) === false) : ?>
+        <span class="connector"></span>
+    <?php endif; ?>
+
     <div class="container">
         <?php if (empty($title) === false || empty($text) === false ) : ?>
             <div class="intro center" data-aos="fade-up">

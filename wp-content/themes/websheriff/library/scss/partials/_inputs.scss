@@ -11,11 +11,11 @@ select {
     -webkit-appearance: none;
     font-size: 1rem;
     color: $text !important;
-    padding: 15px !important;
+    padding: 20px !important;
     max-width: 100%;
     background: $white;
-    border-radius: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    border: none;
     outline: none;
     box-shadow: none;
 
@@ -24,9 +24,6 @@ select {
     }
 }
 
-textarea {
-    border-radius: $radius-small;
-}
 
 label,
 legend {
@@ -42,12 +39,16 @@ legend {
 }
 
 .wpforms-field {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 0 !important;
 
     ul li {
         list-style: none;
     }
+}
+
+.wpforms-submit-container {
+    margin-top: 20px;
 }
 
 .wpforms-field-layout {

@@ -8,20 +8,27 @@ $footer_image = get_field('footer_image', 'option');
 
 <footer class='footer'>
     <div class='container'>
-        <?php if (empty($footer_text) === false) : ?>
-            <h4><?php echo $footer_text; ?></h4>
-        <?php endif; ?>
+        <div class="content">
+            <?php if (empty($footer_text) === false) : ?>
+                <h4><?php echo $footer_text; ?></h4>
+            <?php endif; ?>
 
-        <div class="flex-wrapper">
-            <div class="col">
-                <?php if (empty($footer_contact_information) === false) {
-                    echo $footer_contact_information;
-                } ?>
+            <div class="flex-wrapper">
+                <div class="col">
+                    <?php if (empty($footer_contact_information) === false) {
+                        echo $footer_contact_information;
+                    } ?>
+                </div>
+
+                <?php if (empty($footer_image) === false) : ?>
+                    <img src="<?php echo $footer_image['sizes']['large']; ?>" alt="<?php echo $footer_image['alt']; ?>">
+                <?php endif; ?>
             </div>
 
-            <?php if (empty($footer_image) === false) : ?>
-                <img src="<?php echo $footer_image['sizes']['large']; ?>" alt="<?php echo $footer_image['alt']; ?>">
-            <?php endif; ?>
+            <div class="copyright">
+                <p>&copy; <?php echo date('Y'); ?> Marleen de Bruijn</p>
+                <?php wp_nav_menu(['theme_location' => 'copyright-nav']); ?>
+            </div>
         </div>
     </div>
 </footer>

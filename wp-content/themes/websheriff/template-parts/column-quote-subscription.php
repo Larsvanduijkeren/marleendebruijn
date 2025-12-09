@@ -18,19 +18,11 @@ $id = get_field('id');
             <div class="reviews" data-aos="fade-up">
                 <?php foreach ($quotes as $review) :
                     $review_id = $review;
-                    $review_image = get_field('image', $review_id);
                     $review_text = get_field('review_text', $review_id);
                     $review_author = get_field('author', $review_id);
                     $review_meta = get_field('meta', $review_id);
                     ?>
                     <div class="single-review">
-                        <?php if (empty($review_image) === false) : ?>
-                            <span class="image">
-                                <img src="<?php echo $review_image['sizes']['medium']; ?>"
-                                     alt="<?php echo $review_image['alt']; ?>">
-                            </span>
-                        <?php endif; ?>
-
                         <h4><?php echo get_the_title($review_id); ?></h4>
 
                         <?php if (empty($review_text) === false) : ?>

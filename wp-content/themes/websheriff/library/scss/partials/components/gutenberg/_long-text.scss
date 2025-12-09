@@ -1,0 +1,10 @@
+section.long-text {
+    .content {
+        margin: 0 auto;
+        max-width: 800px;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -13,6 +13,25 @@ section.review-selection {
             margin: 40px;
             text-align: center;
 
+            > * {
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .image {
+                display: block;
+                margin-bottom: 20px;
+
+                img {
+                    width: 125px;
+                }
+            }
+
+            h4 {
+                font-weight: 500;
+            }
+
             > *:last-child {
                 margin-bottom: 0;
             }
@@ -29,7 +48,7 @@ section.review-selection {
             width: 100%;
             max-width: 100%;
             flex-basis: 100%;
-            margin: 0 0 20px 0;
+            margin: 0 0 40px 0;
 
             &:last-child {
                 margin-bottom: 0;

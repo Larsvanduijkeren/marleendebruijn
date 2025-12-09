@@ -108,6 +108,7 @@ function registerMenu()
 {
     register_nav_menu('header-top-nav', __('Header Top Nav'));
     register_nav_menu('header-nav', __('Header Nav'));
+    register_nav_menu('copyright-nav', __('Copyright Nav'));
 }
 
 add_action('init', 'registerMenu');

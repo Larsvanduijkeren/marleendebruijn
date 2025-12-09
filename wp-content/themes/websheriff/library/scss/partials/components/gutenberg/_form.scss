@@ -11,10 +11,10 @@ section.form {
             max-width: calc(60% - 80px);
             flex-basis: calc(60% - 80px);
             margin: 40px;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
 
             > * {
-                max-width: 600px;
+                max-width: 500px;
             }
 
             > *:last-child {
