@@ -86,10 +86,13 @@ section.pros-image {
 
             .pro {
                 font-size: 1.1rem;
-                padding-left: 30px;
+                padding-left: 50px;
 
                 &:before {
                     font-size: 1.25rem;
+                    top: 0;
+                    width: 30px;
+                    height: 30px;
                 }
             }
         }
