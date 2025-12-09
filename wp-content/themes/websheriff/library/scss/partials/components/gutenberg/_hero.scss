@@ -48,6 +48,24 @@ section.hero {
     }
 }
 
+@media only screen and (min-width: 2200px) {
+    section.hero {
+        &.media-first {
+            .image {
+                width: 1000px;
+                left: auto;
+                right: 50%;
+            }
+        }
+
+        .image {
+            width: 1000px;
+            right: auto;
+            left: 50%;
+        }
+    }
+}
+
 @media only screen and (max-width: 991px) {
     section.hero {
         .content {
