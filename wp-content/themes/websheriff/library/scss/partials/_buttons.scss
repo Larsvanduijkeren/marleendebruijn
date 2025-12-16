@@ -31,7 +31,6 @@ input[type=submit] {
 
 }
 
-
 .btn-text {
     appearance: none;
     -webkit-appearance: none;
@@ -68,9 +67,11 @@ input[type=submit] {
     display: inline-flex;
     background-color: transparent !important;
     color: $text !important;
-    font-weight: 500 !important;
-    font-size: 1.15rem;
+    font-weight: 700 !important;
+    font-size: .9rem;
     padding: 15px 20px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     font-family: $font-body;
     line-height: 1.6;
     border-radius: 100px;

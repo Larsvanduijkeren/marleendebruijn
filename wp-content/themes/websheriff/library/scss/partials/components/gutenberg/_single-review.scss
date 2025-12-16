@@ -106,6 +106,10 @@ section.single-review {
                 transform: none;
                 color: $text;
                 font-size: 1rem;
+
+                .author {
+                    font-size: 1rem !important;
+                }
             }
 
             .image {
