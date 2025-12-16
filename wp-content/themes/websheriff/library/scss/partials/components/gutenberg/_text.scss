@@ -33,6 +33,30 @@ section.text {
     &.vertical {
         text-align: center;
 
+        .devices {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: -20px;
+
+            > * {
+                width: calc(33.333% - 40px);
+                max-width: calc(33.333% - 40px);
+                flex-basis: calc(33.333% - 40px);
+                margin: 20px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
         .col > *:last-child {
             margin-bottom: 0;
         }
@@ -103,6 +127,28 @@ section.text {
             }
         }
 
+        &.vertical .flex-wrapper .content {
+            p img {
+                max-width: 200px;
+            }
+
+            .devices {
+                display: block;
+                margin: 0 0 20px 0;
+
+                > * {
+                    width: 100%;
+                    max-width: 100%;
+                    flex-basis: 100%;
+                    margin: 0 0 20px 0;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
         .flex-wrapper,
         &.horizontal .flex-wrapper {
             display: block;
@@ -122,11 +168,11 @@ section.text {
         }
 
         &.text-medium {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         &.text-large {
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
     }
 }

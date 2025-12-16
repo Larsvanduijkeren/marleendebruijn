@@ -1,4 +1,5 @@
 <?php
+$text_color = get_field('text_color');
 $alignment = get_field('alignment');
 $title = get_field('title');
 $text = get_field('text');
@@ -11,7 +12,7 @@ $id = get_field('id');
 ?>
 
 <section
-    class="form-image <?php echo $alignment; ?>"
+    class="form-image <?php echo $alignment; ?> text-<?php echo $text_color; ?>"
     id="<?php if (empty($id) === false) {
         echo $id;
     } ?>"

@@ -100,12 +100,21 @@ section.scan {
     section.scan {
         .single-review {
             padding: 20px;
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
 
         .flex-wrapper {
             display: block;
             margin: 0;
+
+            .image {
+                padding-left: 40px;
+                img {
+                    max-width: 300px;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
 
             > *:first-child,
             > *:last-child {

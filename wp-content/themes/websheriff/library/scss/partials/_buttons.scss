@@ -6,8 +6,10 @@ input[type=submit] {
     display: inline-flex;
     background-color: $orange !important;
     color: $white !important;
-    font-weight: 500 !important;
-    font-size: 1.15rem;
+    font-weight: 700 !important;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     padding: 15px 20px !important;
     font-family: $font-body;
     line-height: 1.6;

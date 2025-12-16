@@ -80,8 +80,8 @@ header.header {
                                 left: 0;
                                 bottom: -2px;
                                 width: 0;
-                                height: 2px;
-                                background: $orange;
+                                height: 1px;
+                                background: $text;
                                 transition: all 0.3s ease-in-out;
                             }
                         }
@@ -130,8 +130,10 @@ header.header {
                         }
 
                         a {
-                            font-size: 1rem;
-                            font-weight: 400;
+                            font-size: .9rem;
+                            letter-spacing: 1px;
+                            font-weight: 700;
+                            text-transform: uppercase;
                             color: $text;
                             padding: 5px 15px;
                             border: 1px solid $text;

@@ -82,6 +82,10 @@ section.single-review {
             h2 {
                 font-weight: 500;
             }
+
+            .author {
+                font-size: 1.25rem;
+            }
         }
     }
 }
@@ -101,7 +105,7 @@ section.single-review {
                 width: auto;
                 transform: none;
                 color: $text;
-                font-size: 1.25rem;
+                font-size: 1rem;
             }
 
             .image {

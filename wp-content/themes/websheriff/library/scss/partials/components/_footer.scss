@@ -2,6 +2,7 @@ footer.footer {
     background: $dark-blue;
     color: $white;
     font-size: 1.25rem;
+    line-height: 1.35;
 
     .container {
         padding-bottom: 40px !important;
@@ -86,13 +87,25 @@ footer.footer {
 @media only screen and (max-width: 991px) {
     footer.footer {
         font-size: 1rem;
+        text-align: center;
+        position: relative;
+        padding-top: 235px;
+
+        .container {
+            position: static;
+        }
 
         h4 {
-            margin-bottom: 20px;
+            margin-bottom: 60px;
+            font-size: 1.25rem;
         }
 
         img {
-            max-width: 150px !important;
+            max-width: 175px !important;
+            position: absolute;
+            left: 50%;
+            top: 60px;
+            transform: translateX(-50%);
         }
 
         .flex-wrapper {

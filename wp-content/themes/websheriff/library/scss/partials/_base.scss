@@ -59,3 +59,10 @@ p {
     margin: 0 0 $gutter-small 0;
     font-weight: 300;
 }
+
+@media only screen and (max-width: 991px) {
+    body,
+    html {
+        font-size: 18px;
+    }
+}

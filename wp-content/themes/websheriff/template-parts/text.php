@@ -3,6 +3,7 @@ $text_size = get_field('text_size');
 $background = get_field('background');
 $direction = get_field('direction');
 $image = get_field('image');
+$device_screenshots = get_field('device_screenshots');
 $title = get_field('title');
 $title_text = get_field('title_text');
 $text = get_field('text');
@@ -46,10 +47,24 @@ $id = get_field('id');
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
+
             <div class="content" data-aos="fade-up">
                 <?php if (empty($text) === false) {
                     echo $text;
                 } ?>
+
+                <?php if (empty($device_screenshots) === false) : ?>
+                    <div class="devices">
+                        <?php foreach ($device_screenshots as $screenshot) : ?>
+                            <?php if (empty($screenshot) === false) : ?>
+                                <span class="image">
+                                    <img src="<?php echo $screenshot['sizes']['large']; ?>"
+                                         alt="<?php echo $screenshot['alt']; ?>">
+                                </span>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
 
                 <?php if (empty($buttons) === false) : ?>
                     <?php foreach ($buttons as $button) : ?>

@@ -1,4 +1,6 @@
 section.steps {
+    position: relative;
+    z-index: 5;
     .intro {
         font-size: 1.25rem;
     }
@@ -157,6 +159,7 @@ section.steps {
                     max-width: 100%;
                     flex-basis: 100%;
                     margin: 0 0 40px 0;
+                    font-size: 1rem;
 
                     .count {
                         width: 80px;
@@ -187,7 +190,12 @@ section.steps {
                     width: 100%;
                     max-width: 100%;
                     flex-basis: 100%;
+                    font-size: 1rem;
                     margin: 0 0 80px 0;
+
+                    h4 {
+                        font-size: 22px;
+                    }
 
                     &:last-child {
                         margin-bottom: 0;
