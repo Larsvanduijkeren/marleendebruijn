@@ -69,7 +69,8 @@
                 "grey": "Grey",
                 "blue": "Blue",
                 "mid-blue": "Mid blue",
-                "purple": "Purple"
+                "purple": "Purple",
+                "blue-to-white": "Blue to white"
             },
             "default_value": "white",
             "return_format": "value",
@@ -306,5 +307,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1765874968
+    "modified": 1766049337
 }

@@ -53,6 +53,18 @@ section.form {
             display: block;
             margin: 0;
 
+
+
+            .image {
+                display: block;
+
+                img {
+                    max-width: 200px;
+                    display: block;
+                    margin: 0 auto !important;
+                }
+            }
+
             > *:first-child,
             > *:last-child {
                 width: 100%;

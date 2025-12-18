@@ -1,4 +1,4 @@
-section:not(.pros-image):not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) + section:not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) .container {
+section:not(.blue-to-white):not(.pros-image):not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) + section:not(.blue-to-white):not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) .container {
     padding-top: 0 !important;
 }
 
@@ -101,11 +101,27 @@ section.mid-blue {
     }
 }
 
+section.blue-to-white {
+    background: linear-gradient(to bottom, rgba(230,239,248,1) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    .connector {
+        border-top-color: $light-blue;
+    }
+
+    + section.white .container {
+        padding-top: 0 !important;
+    }
+}
+
 section.blue {
     background: $light-blue;
 
     .connector {
         border-top-color: $light-blue;
+    }
+
+    + section.blue-to-white .container {
+        padding-top: 0 !important;
     }
 
     + section.blue .container {
