@@ -1,4 +1,13 @@
 section.text {
+    &.forward {
+        position: relative;
+        z-index: 1;
+    }
+
+    .badge {
+        margin-bottom: 20px;
+    }
+
     &.white.horizontal + section.text.white.horizontal {
         padding-top: 100px;
         border-top: 1px solid $text;
@@ -109,7 +118,7 @@ section.text {
 }
 
 @media only screen and (max-width: 991px) {
-    section.text.white.horizontal+section.text.white.horizontal {
+    section.text.white.horizontal + section.text.white.horizontal {
         padding-top: 80px;
     }
 

@@ -31,6 +31,27 @@ input[type=submit] {
 
 }
 
+.badge {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-flex;
+    background-color: $dark-blue !important;
+    color: $orange !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 15px 30px !important;
+    font-family: $font-body;
+    line-height: 1.6;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+
 .btn-text {
     appearance: none;
     -webkit-appearance: none;

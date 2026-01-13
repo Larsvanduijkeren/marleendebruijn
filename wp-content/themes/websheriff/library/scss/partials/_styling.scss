@@ -1,4 +1,4 @@
-section:not(.blue-to-white):not(.pros-image):not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) + section:not(.blue-to-white):not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) .container {
+section:not(.light-purple):not(.blue-to-white):not(.pros-image):not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) + section:not(.light-purple):not(.blue-to-white):not(.mid-blue):not(.form-image):not(.single-review):not(.image):not(.hero):not(.dark-blue):not(.blue):not(.grey):not(.purple) .container {
     padding-top: 0 !important;
 }
 
@@ -152,3 +152,16 @@ section.purple {
         padding-top: 0 !important;
     }
 }
+
+section.light-purple {
+    background: $light-purple;
+
+    .connector {
+        border-top-color: $light-purple;
+    }
+
+    + section.light-purple .container {
+        padding-top: 0 !important;
+    }
+}
+
